@@ -1,0 +1,98 @@
+{
+ "serviceData": [
+  {
+   "icon": "icon-color",
+   "tilte": "UI/UX Design",
+   "description": "<p>Creating beautiful, intuitive interfaces that users love. From wireframes to high-fidelity prototypes.</p>"
+  },
+  {
+   "icon": "icon-code-open",
+   "tilte": "Frontend Development",
+   "description": "<p>I build modern, responsive, and visually appealing user interfaces using React, Next.js, and Tailwind CSS, ensuring smooth and engaging user experiences.</p>"
+  },
+  {
+   "icon": "icon-wordpress",
+   "tilte": "WordPress Development",
+   "description": "<p>I build professional and fully customizable WordPress websites that are easy to manage, responsive, and optimized for performance.</p>"
+  },
+  {
+   "icon": "icon-code",
+   "tilte": "Full Stack Development",
+   "description": "<p>I develop complete web applications from frontend to backend, focusing on performance, scalability, and clean architecture.</p>"
+  },
+  {
+   "icon": "icon-seo",
+   "tilte": "SEO Optimization",
+   "description": "<p>I optimize websites for search engines to improve visibility, ranking, and organic traffic using modern SEO techniques.</p>"
+  },
+  {
+   "icon": "icon-mobile",
+   "tilte": "Responsive Design",
+   "description": "<p>Ensuring your website looks perfect on all devices, from mobile phones to desktop computers.</p>"
+  },
+  {
+   "icon": "icon-power",
+   "tilte": "Performance Optimization",
+   "description": "<p>I optimize websites for speed, performance, and SEO to ensure fast loading times and better user engagement.</p>"
+  },
+  {
+   "icon": "icon-tree",
+   "tilte": "Component Architecture",
+   "description": "<p>Designing scalable, reusable component systems that make your codebase maintainable and efficient.</p>"
+  },
+  {
+   "icon": "icon-rocket",
+   "tilte": "Web Optimization",
+   "description": "<p>SEO, accessibility, and performance best practices to make your site fast and discoverable.</p>"
+  }
+ ],
+ "projectData": [
+  {
+   "title" : "E-Commerce",
+   "subtitle": "E-Commerce Platform",
+   "icon": "icon-github",
+   "description": "A full-featured e-commerce platform with cart, checkout, and payment integration. Built with React and Tailwind CSS.",
+   "tags": ["Next JS", "Tailwind CSS", "MongoDB", "Express JS"],
+   "liveLink": "#",
+   "githubLink": "#"
+  }
+ ],
+ "contactInfoData":[
+  {
+   "iconClass": "icon-email",
+   "eyebrowText": "Email",
+   "contactInfo": "hemrajjoshi2076@gmail.com",
+   "contactLink": "mailto:hemrajjoshi2076@gmail.com"
+   
+  },
+  {
+   "iconClass": "icon-phone",
+   "eyebrowText": "Phone",
+   "contactInfo": "+977-9865900739",
+   "contactLink": "tel:+977-9865900739"
+  },
+  {
+   "iconClass": "icon-pin",
+   "eyebrowText": "Address",
+   "contactInfo": "Kharobot, Banasthali",
+   "contactLink": "https://maps.app.goo.gl/6B6apkz9aTv5eC777",
+   "targetValue": "_blank"
+  }
+ ],
+
+ "footerSocialLinks":[
+  {
+   "socialIcon": "icon-facebook",
+   "socialLink": "https://www.facebook.com/hemraj.joshi.5439"
+  },
+  {
+   "socialIcon": "icon-linkedin",
+   "socialLink": "https://www.linkedin.com/in/hem-raj-joshi-83096a217/"
+  },
+  {
+   "socialIcon": "icon-instagram",
+   "socialLink": "https://www.instagram.com/hem_raj_joshi_06/"
+  }
+ ]
+ 
+}

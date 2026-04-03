@@ -1,0 +1,29 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-base;
+  }
+  a {
+    @apply text-primary no-underline transition-all hover:text-primary/50 focus:text-primary/50;
+  }
+
+  picture {
+    @apply block;
+  }
+
+  .container {
+    @apply px-5
+  mx-auto;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  p {
+    @apply text-base
+    lg:text-lg
+    mb-4
+    last:mb-0;
+  }
+}

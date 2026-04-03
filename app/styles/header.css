@@ -1,0 +1,106 @@
+@layer base {
+  .site-header{
+    @apply
+    fixed
+    left-0
+    right-0
+    z-10
+    bg-black
+    backdrop-blur-2xl;
+  }
+ .navbar .header-links{
+  @apply
+  hidden
+  lg:flex 
+  items-center 
+  -mx-3 
+  [&_li]:px-3;
+  }
+ .navbar .link-style li a{
+@apply
+font-rowdies
+text-white
+font-extralight
+transition-all
+duration-300
+hover:text-primary
+focus:text-primary
+active:text-primary
+[.active]:text-primary
+[.active]:before:w-10/12
+relative
+pb-1
+before:absolute
+before:transition-all
+before:duration-300
+before:left-0
+before:bottom-0
+before:w-0
+hover:before:w-10/12
+focus:before:w-10/12
+active:before:w-10/12
+before:h-0.5
+before:rounded-full
+before:bg-primary;
+ }
+
+ .hamBurger{
+  @apply
+  lg:hidden
+  flex
+  flex-col
+  gap-y-1
+  [&_span]:inline-block
+  [&_span]:bg-white
+  [&_span]:w-5
+  [&_span]:transition-all
+  [&_span]:duration-300
+  [&_span]:rounded-full
+  [&_span]:h-0.5
+  hover:[&_span]:bg-primary
+  focus:[&_span]:bg-primary
+  active:[&_span]:bg-primary
+ }
+
+ body.active .hamBurger span{
+  @apply
+  bg-primary
+  first:rotate-45
+  first:translate-y-2
+  nth-[2]:opacity-0
+  nth-[2]:w-0
+  nth-[2]:h-0
+  last:-rotate-45
+  last:-translate-y-0.5;
+ }
+
+.mobile-header-links{
+  @apply
+max-lg:absolute
+max-lg:transition-all
+duration-300
+max-lg:left-0
+max-lg:right-0
+max-lg:top-24
+max-lg:-translate-x-full
+max-lg:px-10
+/* text-center */
+max-lg:bg-black
+max-lg:h-lvw
+max-lg:z-20
+max-lg:flex
+max-lg:flex-col
+max-lg:gap-y-5
+lg:hidden;
+ }
+
+  body.active{
+   @apply
+   overflow-hidden;
+  }
+
+ body.active .mobile-header-links{
+  @apply
+translate-0;
+ }
+}

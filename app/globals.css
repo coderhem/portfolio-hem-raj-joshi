@@ -1,5 +1,12 @@
 @import "tailwindcss";
-
+@import "./styles/typography.css";
+@import "./styles/base.css";
+@import "./styles/header.css";
+@import "./styles/button.css";
+@import "./styles/fonts.css";
+@import "./styles/animation.css";
+@import "./styles/form.css";
+@import "../app/lib/style.css";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,8 +15,15 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-berkshire: var(--font-berkshire-swash);
+  --font-rowdies: var(--font-rowdies);
+  --font-base: var(--font-lato);
+  --color-primary: #ff6900;
+  --color-light-orange: #ffd7a8;
+  --color-dark-orange: #f54a00;
+  --color-yellow: #fdc700;
+  --color-red: #FF0000;
+  --font-icomoon: "icomoon";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +36,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }

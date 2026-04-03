@@ -1,0 +1,47 @@
+.get-in-touch label{
+@apply
+block mb-3 font-medium text-white/80;
+} 
+
+.form-input {
+  @apply border
+ border-white/40
+ h-12
+ py-2
+ px-5 
+ rounded-md
+ focus-visible:outline-0
+ text-sm
+ placeholder:font-bold
+ focus-within:border-primary/70
+ transition-all
+ duration-300
+ w-full;
+}
+
+textarea.form-input {
+ @apply
+ resize-none
+ h-28;
+}
+.form-group{
+ @apply
+ mb-5;
+}
+
+/* Error */
+.error {
+  @apply text-xs pt-3;
+}
+
+.error-message {
+  @apply text-red-700
+ text-sm
+ pt-2
+ pl-7
+ hidden;
+}
+
+.error .error-message {
+  @apply block;
+}
