@@ -75,7 +75,7 @@ const Form = () => {
   setLoading(true)
   setSuccess('')
 
-  const res = await fetch('/api/auth/', {
+  const res = await fetch('/.netlify/functions/auth', {
    method: 'POST',
    body: JSON.stringify(formData),
   })
