@@ -8,8 +8,8 @@
 @import "./styles/form.css";
 @import "../app/lib/style.css";
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 @theme inline {
