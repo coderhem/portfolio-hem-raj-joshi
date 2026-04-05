@@ -58,7 +58,6 @@ const Form = () => {
   } else if (!/^\d{10}$/.test(formData.phone)) {
    newErrors.phone = 'Phone must be number and 10 digits'
   }
-
   return newErrors
  }
 
@@ -71,17 +70,13 @@ const Form = () => {
    setErrors(validationErrors)
    return
   }
-
   setLoading(true)
   setSuccess('')
-
   const res = await fetch('/.netlify/functions/auth', {
    method: 'POST',
    body: JSON.stringify(formData),
   })
-
   const data = await res.json()
-
   if (res.ok) {
    setSuccess(`Your message has been sent successfully! I’ll get back to you shortly. For urgent matters, please call me at 9865900739.`)
    setFormData({ name: '', email: '', phone: '', message: '' })
@@ -96,9 +91,6 @@ const Form = () => {
     {/* success message */}
     {success && (
      <div className="flex items-center gap-2 bg-green-800 text-white border border-green-300 px-4 py-5 rounded-md mt-4 mb-6 text-center">
-      {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-      </svg> */}
       <span className="font-medium">{success}</span>
      </div>
     )}
@@ -128,7 +120,6 @@ const Form = () => {
      <button className='btn btn-primary w-full' type="submit" disabled={loading}>
       {loading ? 'Sending...' : 'Submit'}
      </button>
-
     </form>
    </div>
   </>
