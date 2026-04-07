@@ -40,7 +40,7 @@ export default function Home() {
               description="Here are some of the projects I’ve built, showcasing my skills in creating modern, responsive, and user-friendly web applications."
               customClass="mb-10"
             />
-            <div className="flex flex-wrap -mx-3">
+            <div className="flex flex-wrap gap-y-6 -mx-3">
               {projectCardData.projectData.map((item, index) => (
                 <div className="w-full md:w-1/2 lg:w-1/3 px-3" key={index}>
                   <ProjectCard
@@ -89,7 +89,7 @@ export default function Home() {
               description="Have a project in mind? Let's work together to bring your ideas to life."
               customClass="mb-10 lg:mb-14"
             />
-            <div className="flex flex-wrap -mx-2 lg:-mx-3">
+            <div className="flex flex-wrap gap-y-10 -mx-2 lg:-mx-3">
               <div className="w-full md:w-1/2 px-2 lg:px-3">
                 <div className="h-full bg-white/5 border border-white/30 rounded-md py-7 px-5 mb-10 space-y-5">
                   <div className="mb-5 md:mb-7">

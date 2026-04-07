@@ -5,23 +5,45 @@ import headerLogo from 'header-logo.webp'
 
 const Header = ({ setHeaderHeight }: any) => {
 
- const [active, setActive] = useState(false);
+const [active, setActive] = useState(false);
+const headerRef = useRef<HTMLDivElement>(null);
+const [headerHeight, setHeaderHeightLocal] = useState(0);
 
- useEffect(() => {
-  if (active) {
-   document.body.classList.add("active")
-  }
-  else {
-   document.body.classList.remove("active")
-  }
- }, [active])
+useEffect(() => {
+  const handleClick = (event: MouseEvent) => {
+    const target = event.target as HTMLElement;
 
- const headerRef = useRef<HTMLDivElement>(null);
- useEffect(() => {
+    // 1. If clicked on any link → close
+    if (target.closest("a")) {
+      setActive(false);
+      return;
+    }
+
+    // 2. If clicked outside → close
+    if (
+      headerRef.current &&
+      !headerRef.current.contains(target)
+    ) {
+      setActive(false);
+    }
+  };
+
+  document.addEventListener("click", handleClick);
+
+  return () => {
+    document.removeEventListener("click", handleClick);
+  };
+}, []);
+
+useEffect(() => {
   if (headerRef.current) {
-   setHeaderHeight(headerRef.current.offsetHeight);
+    setHeaderHeightLocal(headerRef.current.offsetHeight);
   }
- }, [setHeaderHeight]);
+}, []);
+
+useEffect(() => {
+  document.body.classList.toggle("active", active);
+}, [active]);
 
  return (
   <header className='site-header py-5 bg-black/70' ref={headerRef}>
@@ -42,7 +64,7 @@ const Header = ({ setHeaderHeight }: any) => {
        <li><a href="#projects">Projects</a></li>
        <li><a href="#contact">Contact</a></li>
       </ul>
-      <ul className='mobile-header-links link-style'>
+      <ul className='mobile-header-links link-style h-lvh pt-5' style={{ top: `${headerHeight}px` }}>
        <li><a href="#home">Home</a></li>
        <li><a href="#about">About</a></li>
        <li><a href="#skills">Skils</a></li>
