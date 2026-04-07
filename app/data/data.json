@@ -48,13 +48,31 @@
  ],
  "projectData": [
   {
-   "title" : "E-Commerce",
-   "subtitle": "E-Commerce Platform",
+   "title" : "Nikonep",
+   "subtitle": "Nikonep – Healthcare Platform",
    "icon": "icon-github",
-   "description": "A full-featured e-commerce platform with cart, checkout, and payment integration. Built with React and Tailwind CSS.",
+   "description": "A modern and responsive hospital web application designed to provide a seamless user experience, featuring clean UI, fast performance, and easy access to healthcare services across all devices.",
    "tags": ["Next JS", "Tailwind CSS", "MongoDB", "Express JS"],
-   "liveLink": "#",
-   "githubLink": "#"
+   "liveLink": "https://nikonep.netlify.app/",
+   "githubLink": "https://github.com/coderhem/next-projects.git"
+  },
+  {
+   "title" : "Corezen",
+   "subtitle": "Corezen – Gym & Fitness Website",
+   "icon": "icon-github",
+   "description": "A modern and responsive fitness website designed for gyms and personal trainers. Features a clean and energetic UI to showcase workouts, services, and memberships. Built for smooth navigation and engaging user experience. Optimized for performance across all devices.",
+   "tags": ["Next JS", "Tailwind CSS", "MongoDB", "Express JS"],
+   "liveLink": "https://corezen.netlify.app/",
+   "githubLink": "https://github.com/coderhem/website-2025.git"
+  },
+  {
+   "title" : "AppSoft",
+   "subtitle": "AppSoft – Tech Website",
+   "icon": "icon-github",
+   "description": "A modern and responsive tech website built to showcase digital services and solutions. Designed with a clean and professional interface for better user engagement. Highlights services, projects, and company information effectively. Optimized for fast performance and seamless experience across all devices.",
+   "tags": ["Next JS", "Tailwind CSS", "MongoDB", "Express JS"],
+   "liveLink": "https://apptechnosoft.netlify.app/",
+   "githubLink": "https://github.com/coderhem/website-2025.git"
   }
  ],
  "contactInfoData":[
