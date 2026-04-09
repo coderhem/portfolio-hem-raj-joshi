@@ -36,11 +36,12 @@ const Header = ({ setHeaderHeight }: any) => {
     };
   }, []);
 
-useLayoutEffect(() => {
-  if (headerRef.current) {
-    setHeaderHeightLocal(headerRef.current.offsetHeight);
-  }
-}, []);
+  useEffect(() => {
+    if (headerRef.current) {
+      const height = headerRef.current.offsetHeight;
+      setHeaderHeight(height); // parent लाई उचाइ पास गर्छ
+    }
+  }, [setHeaderHeight]);
 
   useEffect(() => {
     document.body.classList.toggle("active", active);
