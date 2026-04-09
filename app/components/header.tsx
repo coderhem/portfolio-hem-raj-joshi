@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import headerLogo from 'header-logo.webp';
 import navItems from '../data/data.json';
 const Header = ({ setHeaderHeight }: any) => {
@@ -36,11 +36,11 @@ const Header = ({ setHeaderHeight }: any) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (headerRef.current) {
-      setHeaderHeightLocal(headerRef.current.offsetHeight);
-    }
-  }, []);
+useLayoutEffect(() => {
+  if (headerRef.current) {
+    setHeaderHeightLocal(headerRef.current.offsetHeight);
+  }
+}, []);
 
   useEffect(() => {
     document.body.classList.toggle("active", active);
