@@ -6,9 +6,9 @@ import Image from 'next/image';
 import heroImage from '../../public/banner-featured-image.png'
 
 
-const Banner = ({ headerHeight }: { headerHeight: number }) => {
+const Banner = () => {
   return (
-    <section className='py-12 md:py-16 lg:py-24 bg-linear-to-r from-primary/5 to-primary/0 relative before:absolute before:left-0 before:top-1/2 before:size-40 before:bg-primary/40 before:-z-1 before:blur-3xl' style={{ marginTop: headerHeight }} id='home'>
+    <section className='py-12 md:py-16 lg:py-24 bg-linear-to-r from-primary/5 to-primary/0 relative before:absolute before:left-0 before:top-1/2 before:size-40 before:bg-primary/40 before:-z-1 before:blur-3xl' id='home'>
       <div className="container">
         <div className="flex flex-wrap gap-y-8 -mx-5">
           {/* Left Column */}

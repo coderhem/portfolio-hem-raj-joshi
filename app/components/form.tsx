@@ -78,7 +78,7 @@ const Form = () => {
   })
   const data = await res.json()
   if (res.ok) {
-   setSuccess(`Your message has been sent successfully! I’ll get back to you shortly. For urgent matters, please call me at 9865900739.`)
+   setSuccess(`Your message has been sent successfully! I'll get back to you shortly.`)
    setFormData({ name: '', email: '', phone: '', message: '' })
   }
 

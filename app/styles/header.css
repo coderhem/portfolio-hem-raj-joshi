@@ -26,8 +26,6 @@ duration-300
 hover:text-primary
 focus:text-primary
 active:text-primary
-[.active]:text-primary
-[.active]:before:w-10/12
 relative
 pb-1
 before:absolute
@@ -44,6 +42,11 @@ before:rounded-full
 before:bg-primary;
  }
 
+ .navbar .link-style li.active a{
+  @apply
+  text-primary
+    before:w-10/12;
+ }
  .hamBurger{
   @apply
   lg:hidden

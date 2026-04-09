@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import EducationCard from "./components/cards/educationCard";
 import Banner from "./components/banner";
 import About from "./components/about";
 import Skills from "./components/cards/skills";
@@ -24,13 +23,42 @@ export default function Home() {
       {/* Header */}
 
       {/* Main Content */}
-      <main className="flex-1">
-        <Banner headerHeight={headerHeight} />
-        <About />
+      <main className="flex-1" style={{ marginTop: headerHeight }} >
+        <Banner  />
+
+        {/* About Section */}
+        <section className='py-12 md:py-16 lg:py-24 xl:py-28 relative z-1 bg-[url("../public/banner-image.png")] bg-cover bg-no-repeat bg-right before:bg-linear-to-l before:from-black/60 before:to-black before:absolute before:inset-0 before:-z-1' id='about'>
+          <About />
+        </section>
 
         {/* Skils */}
-        <Skills />
-
+        <section className="py-12 md:py-14 lg:py-20 xl:py-24 relative before:absolute before:size-20 before:bg-primary/10 before:rounded-full before:top-0 before:-left-10" id='skills'>
+          <Skills />
+        </section>
+        
+        {/* Service Section */}
+        <section className="py-12 md:py-16 lg:py-24" id="services">
+          <BlockTitle
+            title='What I Offer'
+            description='I deliver end-to-end web development solutions, combining modern technologies, clean design, and optimized performance to create scalable and user-focused applications.'
+            customClass='mb-10'
+          />
+          <div className="container">
+            <div className="flex flex-wrap justify-center gap-y-6 -mx-3">
+              {serviceCardData.serviceData.map((item, index) => {
+                return (
+                  <div className="w-full md:w-1/2 lg:w-1/3 px-3" key={index}>
+                    <ServiceCard
+                      iconClass={item.icon}
+                      cardTitle={item.tilte}
+                      cardDescription={item.description}
+                    />
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
 
         {/* Project Section */}
         <section className="py-10 lg:py-14" id="projects">
@@ -58,29 +86,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Service Section */}
-        <section className="py-12 md:py-16 lg:py-24" id="services">
-          <BlockTitle
-            title='What I Offer'
-            description='I deliver end-to-end web development solutions, combining modern technologies, clean design, and optimized performance to create scalable and user-focused applications.'
-            customClass='mb-10'
-          />
-          <div className="container">
-            <div className="flex flex-wrap justify-center gap-y-6 -mx-3">
-              {serviceCardData.serviceData.map((item, index) => {
-                return (
-                  <div className="w-full md:w-1/2 lg:w-1/3 px-3" key={index}>
-                    <ServiceCard
-                      iconClass={item.icon}
-                      cardTitle={item.tilte}
-                      cardDescription={item.description}
-                    />
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+
         {/* Get In Touch */}
         <section className="py-8 md:py-10 lg:py-14" id="contact">
           <div className="container">
@@ -114,6 +120,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
       </main>
 
       {/* Footer */}

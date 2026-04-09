@@ -1,4 +1,30 @@
 {
+ "headerLinks": [
+  {
+   "id": "home",
+   "label": "Home"
+  },
+  {
+   "id": "about",
+   "label": "About"
+  },
+  {
+   "id": "skills",
+   "label": "Skills"
+  },
+  {
+   "id": "services",
+   "label": "Services"
+  },
+  {
+   "id": "projects",
+   "label": "Projects"
+  },
+  {
+   "id": "contact",
+   "label": "Contact"
+  }
+ ],
  "serviceData": [
   {
    "icon": "icon-color",
@@ -48,49 +74,63 @@
  ],
  "projectData": [
   {
-   "title" : "Nikonep",
+   "title": "Nikonep",
    "subtitle": "Healthcare Platform",
    "icon": "icon-github",
    "description": "A modern and responsive hospital web application designed to provide a seamless user experience, featuring clean UI, fast performance, and easy access to healthcare services across all devices.",
-   "tags": ["Next JS", "Tailwind CSS", "MongoDB", "Express JS"],
+   "tags": [
+    "Next JS",
+    "Tailwind CSS",
+    "MongoDB",
+    "Express JS"
+   ],
    "liveLink": "https://nikonep.netlify.app/",
    "githubLink": "https://github.com/coderhem/next-projects.git"
   },
   {
-   "title" : "Corezen",
+   "title": "Corezen",
    "subtitle": "Gym & Fitness Website",
    "icon": "icon-github",
    "description": "A modern and responsive fitness website designed for gyms and personal trainers. Features a clean and energetic UI to showcase workouts, services, and memberships. Built for smooth navigation and engaging user experience. Optimized for performance across all devices.",
-   "tags": ["Next JS", "Tailwind CSS"],
+   "tags": [
+    "Next JS",
+    "Tailwind CSS"
+   ],
    "liveLink": "https://corezen.netlify.app/",
    "githubLink": "https://github.com/coderhem/website-2025.git"
   },
   {
-   "title" : "FrameHub",
+   "title": "FrameHub",
    "subtitle": "Online Frame Business",
    "icon": "icon-github",
    "description": "A modern and responsive fitness website designed for gyms and personal trainers. Features a clean and energetic UI to showcase workouts, services, and memberships. Built for smooth navigation and engaging user experience. Optimized for performance across all devices.",
-   "tags": ["Next JS", "Tailwind CSS"],
+   "tags": [
+    "Next JS",
+    "Tailwind CSS"
+   ],
    "liveLink": "https://corezen.netlify.app/",
    "githubLink": "https://github.com/coderhem/website-2025.git"
   },
   {
-   "title" : "AppSoft",
+   "title": "AppSoft",
    "subtitle": "Tech Website",
    "icon": "icon-github",
    "description": "A modern and responsive tech website built to showcase digital services and solutions. Designed with a clean and professional interface for better user engagement. Highlights services, projects, and company information effectively. Optimized for fast performance and seamless experience across all devices.",
-   "tags": ["HTML", "Tailwind CSS", "Javascript"],
+   "tags": [
+    "HTML",
+    "Tailwind CSS",
+    "Javascript"
+   ],
    "liveLink": "https://apptechnosoft.netlify.app/",
    "githubLink": "https://github.com/coderhem/website-2025.git"
   }
  ],
- "contactInfoData":[
+ "contactInfoData": [
   {
    "iconClass": "icon-email",
    "eyebrowText": "Email",
    "contactInfo": "hemrajjoshi2076@gmail.com",
    "contactLink": "mailto:hemrajjoshi2076@gmail.com"
-   
   },
   {
    "iconClass": "icon-phone",
@@ -106,8 +146,7 @@
    "targetValue": "_blank"
   }
  ],
-
- "footerSocialLinks":[
+ "footerSocialLinks": [
   {
    "socialIcon": "icon-facebook",
    "socialLink": "https://www.facebook.com/hemraj.joshi.5439"
@@ -121,5 +160,4 @@
    "socialLink": "https://www.instagram.com/hem_raj_joshi_06/"
   }
  ]
- 
 }
