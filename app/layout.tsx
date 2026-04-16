@@ -23,6 +23,9 @@ const fontBase = Lato({
 export const metadata: Metadata = {
   title: "Hem Raj Joshi | Frontend Developer Nepal",
   description: "Frontend Developer with 2+ years experience in React, Next.js from Nepal",
+  verification: {
+    google: "abcgoogle-site-verification=zKpUmIyf8AwboGgZdsvmA8oHHKEWTjS5D0oiFaJG8_I123xyz",
+  },
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
