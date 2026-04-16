@@ -45,20 +45,27 @@ const About = () => {
        <h4 className='h3'>Expereicne</h4>
       </div>
       {/* Experience Card */}
-      <div className="ml-3 mb-7 border-l-4 border-primary/70 px-5 py-1 relative before:absolute before:-left-3 before:rounded-full before:top-0 before:size-5 before:bg-primary 
-       before:shadow-lg before:shadow-primary">
-       <span className='text-primary block '>2021 - 2024</span>
-       <h5 className='h4'>Graphic Designer</h5>
-       <span className='text-primary'>Nagarjun Computer and Printing Press</span>
-      </div>
-
-      {/* Experience Card */}
-      <div className="ml-3 border-l-4 border-primary/70 px-5 py-1 relative before:absolute before:-left-3 before:rounded-full before:top-0 before:size-5 before:bg-primary 
+      <div className="ml-3 border-l-4  mb-7 border-primary/70 px-5 py-1 relative before:absolute before:-left-3 before:rounded-full before:top-0 before:size-5 before:bg-primary 
        before:shadow-lg before:shadow-primary">
        <span className='text-primary block '>2024 - 2026</span>
        <h5 className='h4'>Frontend Developer</h5>
        <a href='https://www.smartsites.com/' target='_blank'>SmartSites Nepal</a>
       </div>
+      {/* Experience Card */}
+      <div className="ml-3 mb-7 border-l-4 border-primary/70 px-5 py-1 relative before:absolute before:-left-3 before:rounded-full before:top-0 before:size-5 before:bg-primary 
+       before:shadow-lg before:shadow-primary">
+       <span className='text-primary block '>2021 - 2024</span>
+       <h5 className='h4'>Graphic Designer / Owner</h5>
+       <span className='text-primary'>Nagarjun Computer and Printing Press</span>
+      </div>
+      {/* Experience Card */}
+      <div className="ml-3 border-l-4 border-primary/70 px-5 py-1 relative before:absolute before:-left-3 before:rounded-full before:top-0 before:size-5 before:bg-primary 
+       before:shadow-lg before:shadow-primary">
+       <span className='text-primary block '>2020 - 2021</span>
+       <h5 className='h4'>Graphic Designer</h5>
+       <span className='text-primary'>Niglashaini Computer and Printing Press</span>
+      </div>
+
      </div>
     </div>
    </div>
