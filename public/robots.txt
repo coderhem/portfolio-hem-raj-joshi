@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://joshihemraj.com.np
+
+# Sitemaps
+Sitemap: https://joshihemraj.com.np/sitemap.xml
