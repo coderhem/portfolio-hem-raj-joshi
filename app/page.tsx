@@ -15,8 +15,8 @@ import contactInfo from "./data/data.json"
 import Form from "./components/form";
 import { useState } from "react";
 export default function Home() {
-  const [headerHeight, setHeaderHeight] = useState(0);
 
+  const [headerHeight, setHeaderHeight] = useState(0);
   return (
     <div className="flex flex-col grow">
       <Header setHeaderHeight={setHeaderHeight} />
@@ -24,7 +24,7 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1" style={{ marginTop: headerHeight }} >
-        <Banner  />
+        <Banner />
 
         {/* About Section */}
         <section className='py-12 md:py-16 lg:py-24 xl:py-28 relative z-1 bg-[url("../public/banner-image.png")] bg-cover bg-no-repeat bg-right before:bg-linear-to-l before:from-black/60 before:to-black before:absolute before:inset-0 before:-z-1' id='about'>
@@ -35,7 +35,7 @@ export default function Home() {
         <section className="py-12 md:py-14 lg:py-20 xl:py-24 relative before:absolute before:size-20 before:bg-primary/10 before:rounded-full before:top-0 before:-left-10" id='skills'>
           <Skills />
         </section>
-        
+
         {/* Service Section */}
         <section className="py-12 md:py-16 lg:py-24" id="services">
           <BlockTitle

@@ -1,26 +1,27 @@
 "use client";
-import Image from 'next/image'
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import headerLogo from 'header-logo.webp';
 import navItems from '../data/data.json';
 const Header = ({ setHeaderHeight }: any) => {
 
   const [active, setActive] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
-  const [headerHeight, setHeaderHeightLocal] = useState(0);
-  const [activeSection, setActiveSection] = useState("home");
+  const [headerHeight, setLocalHeaderHeight] = useState(0);
 
+  const [activeSection, setActiveSection] = useState("home");
+  console.log("headerHeight", headerHeight);
+
+  // Nav Links
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
 
-      // 1. If clicked on any link → close
+      // 1. If clicked on any link close
       if (target.closest("a")) {
         setActive(false);
         return;
       }
 
-      // 2. If clicked outside → close
+      // 2. If clicked outside close
       if (
         headerRef.current &&
         !headerRef.current.contains(target)
@@ -36,21 +37,30 @@ const Header = ({ setHeaderHeight }: any) => {
     };
   }, []);
 
-  useEffect(() => {
+  // Measure Header Height
+  useLayoutEffect(() => {
     if (headerRef.current) {
       const height = headerRef.current.offsetHeight;
-      setHeaderHeight(height); // parent लाई उचाइ पास गर्छ
+      setHeaderHeight(height);
     }
-  }, [setHeaderHeight]);
+  }, []);
+  useLayoutEffect(() => {
+    if (headerRef.current) {
+      const headerHeight = headerRef.current.offsetHeight;
+      setLocalHeaderHeight(headerHeight);
+    }
+  }, []);
 
+  // Body active when click
   useEffect(() => {
-    document.body.classList.toggle("active", active);
+    if (typeof window !== "undefined") {
+      document.body.classList.toggle("active", active);
+    }
   }, [active]);
 
   useEffect(() => {
     if (headerRef.current) {
       const height = headerRef.current.offsetHeight;
-
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -61,7 +71,7 @@ const Header = ({ setHeaderHeight }: any) => {
         },
         {
           threshold: 0,
-          rootMargin: `-${height}px 0px -90% 0px`, // 🔥 dynamic
+          rootMargin: `-${height}px 0px -90% 0px`,
         }
       );
 
@@ -96,9 +106,8 @@ const Header = ({ setHeaderHeight }: any) => {
               ))}
 
             </ul>
-            <ul className='mobile-header-links link-style h-lvh pt-5' style={{ top: `${headerHeight}px` }}>
-              <ul className="header-links link-style flex gap-6">
-
+            <div className='mobile-header-links link-style h-lvh pt-5' style={{ top: `${headerHeight}px` }}>
+              <ul className="header-links link-style flex flex-col gap-6">
                 {navItems.headerLinks.map((item) => (
                   <li
                     key={item.id}
@@ -109,7 +118,7 @@ const Header = ({ setHeaderHeight }: any) => {
                 ))}
 
               </ul>
-            </ul>
+            </div>
 
             <ul className='contact-btn'>
               <li><a href="tel:+977-9865900739" className='btn btn-primary icon'><span className='max-sm:hidden'>Hire ME</span></a></li>

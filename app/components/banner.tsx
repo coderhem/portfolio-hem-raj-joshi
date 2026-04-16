@@ -44,7 +44,7 @@ const Banner = () => {
             </div>
             {/* CTA Wrapper */}
             <div className="my-7 flex flex-wrap gap-5">
-              <a href="#" className='btn btn-white'>Explore Projects</a>
+              <a href="#projects" className='btn btn-white'>Explore Projects</a>
               <a href="tel:+977-9865900739" className='btn btn-outline rounded-none max-sm:before:left-5 max-sm:before:translate-x-0'>Hire ME</a>
             </div>
           </div>

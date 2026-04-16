@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" className={`${fontLead.variable} ${fontBase.variable} ${fontRowdies.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col" cz-shortcut-listen="true">{children}</body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
