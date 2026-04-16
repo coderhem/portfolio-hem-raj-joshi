@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Berkshire_Swash, Lato, Rowdies } from "next/font/google";
 import "./globals.css";
+
 
 const fontLead = Berkshire_Swash({
   variable: "--font-berkshire-swash",
@@ -29,11 +31,11 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Hem Raj Joshi" }],
   metadataBase: new URL("https://joshihemraj.com.np/"),
-  openGraph:{
+  openGraph: {
     title: "Hem Raj Joshi | Portfolio",
     description: "Full Stack Developer from Nepal skilled in React, Next.js, and Java.",
     siteName: "Portfolio | Hem Raj Joshi",
-    images:[
+    images: [
       {
         url: "/og-image.png",
         width: 1200,
@@ -48,6 +50,20 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en" className={`${fontLead.variable} ${fontBase.variable} ${fontRowdies.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-SFXQQGYXYC"
+        strategy="afterInteractive"
+      />
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SFXQQGYXYC');
+          `}
+      </Script>
     </html>
   );
 }
