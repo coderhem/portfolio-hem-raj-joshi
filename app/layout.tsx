@@ -23,8 +23,8 @@ const fontBase = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Hem Raj Joshi | Frontend Developer Nepal",
-  description: "Full Stack Developer from Nepal with experience in React and Next.js, focused on building modern, responsive web applications and growing backend development skills.",
+  title: "Hem Raj Joshi || Full Stack Developer",
+  description: "Full Stack Developer from Nepal with 2 years of experience in React and Next.js, specializing in building modern, responsive web applications while actively expanding backend development expertise.",
   keywords: ["Hem Raj Joshi Portfolio", "Hem Raj | Full Stack Developer", "Hemu", "Hem Raj", "Hem Raj Portfolio", "Joshi Hem Raj", "Full Stack Developer", "Frontend Developer", "Developer Hem", "MERN Stack Developer", "Java Developer"],
   verification: {
     google: "abcgoogle-site-verification=zKpUmIyf8AwboGgZdsvmA8oHHKEWTjS5D0oiFaJG8_I123xyz",
