@@ -22,12 +22,26 @@ const fontBase = Lato({
 
 export const metadata: Metadata = {
   title: "Hem Raj Joshi | Frontend Developer Nepal",
-  description: "Frontend Developer with 2+ years experience in React, Next.js from Nepal",
+  description: "Full Stack Developer from Nepal with experience in React and Next.js, focused on building modern, responsive web applications and growing backend development skills.",
   keywords: ["Hem Raj Joshi Portfolio", "Hem Raj | Full Stack Developer", "Hemu", "Hem Raj", "Hem Raj Portfolio", "Joshi Hem Raj", "Full Stack Developer", "Frontend Developer", "Developer Hem", "MERN Stack Developer", "Java Developer"],
   verification: {
     google: "abcgoogle-site-verification=zKpUmIyf8AwboGgZdsvmA8oHHKEWTjS5D0oiFaJG8_I123xyz",
   },
-  authors: [{ name: "Hem Raj Joshi" }]
+  authors: [{ name: "Hem Raj Joshi" }],
+  metadataBase: new URL("https://joshihemraj.com.np/"),
+  openGraph:{
+    title: "Hem Raj Joshi | Portfolio",
+    description: "Full Stack Developer from Nepal skilled in React, Next.js, and Java.",
+    siteName: "Portfolio | Hem Raj Joshi",
+    images:[
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 360,
+        alt: "Hem Raj Joshi Logo"
+      }
+    ],
+  }
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
